@@ -36,6 +36,7 @@ jobs:
       - name: Update data file 2
         run: |
           sed -i 's@<p id="myname"></p>@<p id="myname">'"${{ vars.MY_NAME }}"'</p>@g' index.html
+          cat index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
